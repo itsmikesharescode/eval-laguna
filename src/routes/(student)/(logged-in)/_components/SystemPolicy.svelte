@@ -18,9 +18,9 @@
     <div class="flex overflow-auto">
       <div class="mx-auto max-w-4xl p-6">
         <p class="mb-6">
-          This Privacy Policy outlines how ProfEval System collects, uses, and protects the personal
-          information of users, including students and administrators. We are committed to ensuring
-          the privacy and security of your data.
+          This Privacy Policy outlines how LC ITE Faculty Evaluation collects, uses, and protects
+          the personal information of users, including students and administrators. We are committed
+          to ensuring the privacy and security of your data.
         </p>
 
         <h2 class="mb-3 text-2xl font-semibold">Information We Collect</h2>

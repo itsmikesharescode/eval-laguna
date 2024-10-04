@@ -8,14 +8,12 @@
   import Textarea from '$lib/components/ui/textarea/textarea.svelte';
   import type { Departments, ProfessorType, ResultModel } from '$lib/types';
   import { toast } from 'svelte-sonner';
-  import {
-    departments,
-    fromDepartmentsRouteState
-  } from '../../../_states/fromAdminDepartments.svelte';
+  import { fromDepartmentsRouteState } from '../../../_states/fromAdminDepartments.svelte';
   import { updateProfSchema, type UpdateProfSchema } from '../../admin-departments-schema';
   import * as Select from '$lib/components/ui/select';
   import * as Popover from '$lib/components/ui/popover';
   import Button from '$lib/components/ui/button/button.svelte';
+  import { departments } from '../../_states/fromDepRoutes.svelte';
 
   interface Props {
     professor: ProfessorType;

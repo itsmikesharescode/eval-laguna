@@ -25,7 +25,7 @@
         Log out
       </AlertDialog.Title>
       <AlertDialog.Description>
-        You are about to log out from the ProfEval System.
+        You are about to log out from the <strong>LC ITE</strong> Faculty Evaluation.
       </AlertDialog.Description>
     </AlertDialog.Header>
     <AlertDialog.Footer>

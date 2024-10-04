@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { departments } from '../_states/fromAdminDepartments.svelte';
+import { departments } from './_states/fromDepRoutes.svelte';
 
 const sectionRegex = /^[A-Z0-9]+-[A-Z0-9]+$/;
 const subjectRegex = /^[a-zA-Z0-9]+(,[a-zA-Z0-9]+)*$/;

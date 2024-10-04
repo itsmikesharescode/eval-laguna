@@ -58,22 +58,22 @@ export const actions: Actions = {
     else if (user) return { form, msg: 'Password updated successfully.', user };
   },
 
-  updateEmailEvent: async ({ locals: { supabase }, request }) => {
+  updateEmailEvent: async ({ locals: { supabaseAdmin, user }, request }) => {
     const form = await superValidate(request, zod(updateEmailSchema));
     if (!form.valid) return fail(400, { form });
 
-    const {
-      data: { user },
-      error
-    } = await supabase.auth.updateUser({
-      email: form.data.newEmail
+    const { data, error } = await supabaseAdmin.auth.admin.updateUserById(user?.id ?? '', {
+      email: form.data.newEmail,
+      user_metadata: {
+        email: form.data.newEmail
+      }
     });
-
+    console.log(data.user);
     if (error) return fail(401, { form, msg: error.message });
     else if (user)
       return {
         form,
-        msg: `We have sent an confirmation link to your new email ${form.data.newEmail}`,
+        msg: `Update sucessfully to ${form.data.newEmail}`,
         user
       };
   }

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import fes_icon from '$lib/assets/fes_icon.png?enhanced';
+  import iteLogo from '$lib/assets/ite-logo.svg';
   import type { Snippet } from 'svelte';
   import {
     Rocket,
@@ -54,8 +54,7 @@
     onmouseenter={() => (showSideBar = true)}
   >
     <div class="flex flex-col gap-[20px] p-[10px]">
-      <enhanced:img src={fes_icon} alt="nav_icon" class="z-40 mx-auto h-[40px] w-[40px]"
-      ></enhanced:img>
+      <img src={iteLogo} alt={iteLogo} class="z-40 mx-auto h-[40px] w-[40px]" />
       <div class="flex flex-col items-center justify-center gap-[10px]">
         <button
           onclick={() => setRouteFunc('/admin-dashboard')}
@@ -186,12 +185,13 @@
     <nav
       class="sticky top-0 z-10 flex items-center justify-between border-b-[1px] p-[10px] backdrop-blur-sm"
     >
-      <p class="text-xl leading-7 text-primary"><strong>ProfEval</strong> System</p>
+      <p class="text-xl leading-7 text-primary"><strong>LC ITE</strong> Faculty Evaluation</p>
 
       <div class="hidden items-center gap-[5px] text-xl md:flex">
         <p class=" leading-7 text-muted-foreground">{user.getUser()?.user_metadata.role}</p>
+        <!--Admin Fullname here-->
         <p class=" leading-7">
-          {formatName(user.getUser()?.user_metadata.fullname, user.getUser()?.user_metadata.suffix)}
+          {user.getUser()?.user_metadata.fullname}
         </p>
       </div>
 

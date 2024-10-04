@@ -25,7 +25,7 @@
         <div class="flex flex-col items-center justify-center gap-[20px]">
           <img src={iteLogo} alt={iteLogo} class="h-[150px] w-[150px]" />
           <p class="text-center text-3xl">
-            <strong>Lc ITE</strong> Evaluation System
+            <strong>LC ITE</strong> Faculty Evaluation
           </p>
           <p class="text-center text-3xl text-muted-foreground">
             Evaluate as <strong class="text-primary">Student</strong>

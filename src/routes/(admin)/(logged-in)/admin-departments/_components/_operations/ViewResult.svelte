@@ -142,14 +142,14 @@
               </div>
             </div>
 
-            <div class="grid md:grid-cols-2">
+            <!-- <div class="grid md:grid-cols-2">
               <div class="h-[40dvh]">
                 <ResultLineChart datas={datas.averageArray} {professor} />
               </div>
               <div class="h-[40dvh]">
                 <ResultBarChart datas={datas.averageArray} {professor} />
               </div>
-            </div>
+            </div> -->
           </div>
         {:else}
           <div class="flex h-[40dvh] items-center justify-center">

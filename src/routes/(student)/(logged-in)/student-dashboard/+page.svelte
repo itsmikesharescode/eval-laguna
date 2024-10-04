@@ -32,7 +32,9 @@
         <p class="text-sm leading-7">
           You are evaluating your SUBJECT TEACHER, please read the directions before you begin the
           evaluation process. If teachers where wrongly included in the please, please let us know.
-          Message us at blabla@gmail.com
+          Message us at <a href="mailto:lcitedepartment@gmail.com" class="font-semibold underline"
+            >lcitedepartment@gmail.com</a
+          >
         </p>
       </div>
     </div>
@@ -57,7 +59,7 @@
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {#each Array(10) as _}
+        <!-- {#each Array(10) as _}
           <Table.Row>
             <Table.Cell class="truncate">Marriel B. Baet</Table.Cell>
             <Table.Cell class="truncate">Information Technology</Table.Cell>
@@ -68,8 +70,8 @@
               </Button>
             </Table.Cell>
           </Table.Row>
-        {/each}
-        <!-- {#each dashboardRoute.getProfs() ?? [] as professor, index}
+        {/each} -->
+        {#each dashboardRoute.getProfs() ?? [] as professor, index}
           <Table.Row>
             <Table.Cell class="truncate">{professor.fullname}</Table.Cell>
             <Table.Cell class="truncate">{professor.department}</Table.Cell>
@@ -84,7 +86,7 @@
               </Button>
             </Table.Cell>
           </Table.Row>
-        {/each} -->
+        {/each}
       </Table.Body>
     </Table.Root>
   </div>
@@ -110,7 +112,7 @@
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {#each Array(10) as _}
+        <!-- {#each Array(10) as _}
           <Table.Row>
             <Table.Cell>
               <Logs />
@@ -118,18 +120,18 @@
             <Table.Cell class="truncate font-medium">Marriel B. Baet</Table.Cell>
             <Table.Cell class="truncate">Information Technology</Table.Cell>
             <Table.Cell class="truncate">
-              <!-- {#if professor.subjects.split(',').length > 1}
+              {#if professor.subjects.split(',').length > 1}
                 <Subjects subjects={professor.subjects.split(',')} />
               {:else}
                 <span>{professor.subjects}</span>
-              {/if} -->
+              {/if}
               ELECT 4
             </Table.Cell>
             <Table.Cell class="w-[7rem] truncate text-center">85%</Table.Cell>
           </Table.Row>
-        {/each}
+        {/each} -->
 
-        <!-- {#each dashboardRoute.getEvalds() ?? [] as professor, index}
+        {#each dashboardRoute.getEvalds() ?? [] as professor, index}
           <Table.Row>
             <Table.Cell>
               <Actions {professor} />
@@ -151,7 +153,7 @@
               ).toFixed(0)} %
             </Table.Cell>
           </Table.Row>
-        {/each} -->
+        {/each}
       </Table.Body>
     </Table.Root>
   </div>

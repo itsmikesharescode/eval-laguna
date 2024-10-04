@@ -13,7 +13,7 @@
 <nav
   class="sticky top-0 z-10 flex w-full items-center justify-between bg-[#0f2544] p-[10px] backdrop-blur-sm"
 >
-  <p class="font-semibold text-white">Lc ITE Evaluation System</p>
+  <p class="font-semibold text-white">LC ITE Faculty Evaluation</p>
   <div class="flex items-center gap-[10px]">
     <Button
       size="sm"
@@ -43,7 +43,7 @@
     <div class="flex flex-col items-center gap-[20px] rounded-lg bg-[#ffffffc0] p-[20px]">
       <img src={iteLogo} alt={iteLogo} class="h-[150px] w-[150px]" />
       <p class="text-center text-3xl">
-        <strong>Lc ITE</strong> Evaluation System
+        <strong>LC ITE</strong> Faculty Evaluation
       </p>
       <Button
         class="rounded-none font-semibold"

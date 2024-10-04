@@ -2,9 +2,8 @@
   import { MoveUpRight } from 'lucide-svelte';
   import AddProfessor from './_components/AddProfessor.svelte';
   import RenderProfessor from './_components/RenderProfessors.svelte';
-  import { departments } from '../_states/fromAdminDepartments.svelte';
   import { fromAdminRouteState } from '../_states/fromAdminRoute.svelte';
-  import { fromDepRouteState } from './_states/fromDepRoutes.svelte';
+  import { departments, fromDepRouteState } from './_states/fromDepRoutes.svelte';
 
   const { data } = $props();
 
@@ -21,7 +20,7 @@
     {#each departments as department}
       <button
         onclick={() => {
-          depRoute.setRoute(department as 'BSIS' | 'BSE' | 'BTVTED' | 'DOMT' | 'DICT');
+          depRoute.setRoute(department as 'BSIT' | 'BSCS');
         }}
         class=" {department === depRoute.getRoute() ? 'bg-primary text-white' : ''}
 				flex items-center gap-[5px] px-[0.625rem] text-black"

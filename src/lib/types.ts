@@ -98,11 +98,11 @@ export type StudentType = {
 };
 
 export interface Departments {
-  bsisDep: ProfessorType[] | [];
-  bseDep: ProfessorType[] | [];
-  btvtedDep: ProfessorType[] | [];
+  bsitDep: ProfessorType[] | [];
+  bscsDep: ProfessorType[] | [];
+  /* btvtedDep: ProfessorType[] | [];
   domtDep: ProfessorType[] | [];
-  dictDep: ProfessorType[] | [];
+  dictDep: ProfessorType[] | []; */
 }
 
 export interface AdminLayoutQueryType {

@@ -1,11 +1,11 @@
 import { getContext, setContext } from 'svelte';
 
-export const departments = ['BSIS', 'BSE', 'BTVTED', 'DOMT', 'DICT'];
+export const departments = ['BSIT', 'BSCS'];
 
 class DepRouteState {
-  private route = $state<'BSIS' | 'BSE' | 'BTVTED' | 'DOMT' | 'DICT'>('BSIS');
+  private route = $state<'BSIT' | 'BSCS'>('BSIT');
 
-  setRoute(param: 'BSIS' | 'BSE' | 'BTVTED' | 'DOMT' | 'DICT') {
+  setRoute(param: 'BSIT' | 'BSCS') {
     this.route = param;
   }
 

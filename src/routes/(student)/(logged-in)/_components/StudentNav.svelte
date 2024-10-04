@@ -134,7 +134,7 @@
     >
       <p class="text-xl leading-7 text-primary"><strong>Lc ITE </strong> Evaluation System</p>
 
-      <div class="hidden flex-col items-center gap-[5px] text-xl md:flex">
+      <div class="hidden flex-col gap-[5px] text-xl md:flex">
         <p class=" leading-7">
           {formatName(user.getUser()?.user_metadata.fullname, user.getUser()?.user_metadata.suffix)}
         </p>

@@ -1,6 +1,7 @@
 <script lang="ts">
-  import fes_icon from '$lib/assets/fes_icon.png?enhanced';
-  import bg_image from '$lib/assets/bg.webp?enhanced';
+  import iteLogo from '$lib/assets/ite-logo.svg';
+  import landingBg from '$lib/assets/landing-bg.png?enhanced';
+
   import { Undo2 } from 'lucide-svelte';
   import AdminLogin from './_components/AdminLogin.svelte';
 
@@ -11,19 +12,17 @@
   <div class="relative h-screen w-full">
     <!-- Background Image -->
     <enhanced:img
-      src={bg_image}
+      src={landingBg}
       alt="bg_image"
-      class="absolute inset-0 h-full w-full object-cover grayscale filter"
+      class="absolute inset-0 h-full w-full object-cover grayscale-[60%] filter"
     />
-
     <!-- Centered Content -->
     <div class="absolute inset-0 flex flex-col items-center justify-center gap-[10px]">
       <div class="flex flex-col items-center gap-[20px] rounded-lg bg-[#ffffffc0] p-[20px]">
         <div class="flex flex-col items-center justify-center gap-[20px]">
-          <enhanced:img src={fes_icon} class="h-[150px] w-[150px]" alt="landing_icon"
-          ></enhanced:img>
+          <img src={iteLogo} alt={iteLogo} class="h-[150px] w-[150px]" />
           <p class="text-center text-3xl">
-            <strong>ProfEval</strong> System
+            <strong>LC ITE</strong> Faculty Evaluation
           </p>
           <p class="text-center text-3xl text-muted-foreground">
             Log in as <strong class="text-primary">Admin</strong>
