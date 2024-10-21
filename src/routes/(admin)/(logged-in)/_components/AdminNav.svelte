@@ -191,7 +191,8 @@
         <p class=" leading-7 text-muted-foreground">{user.getUser()?.user_metadata.role}</p>
         <!--Admin Fullname here-->
         <p class=" leading-7">
-          {user.getUser()?.user_metadata.fullname}
+          <!-- {user.getUser()?.user_metadata.fullname} -->
+          Maria Luisa Concordia
         </p>
       </div>
 
