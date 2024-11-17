@@ -77,7 +77,14 @@
 
     <Form.FieldErrors />
   </Form.Field>
+  <Form.Field {form} name="lastName">
+    <Form.Control let:attrs>
+      <Form.Label>Last Name</Form.Label>
+      <Input {...attrs} bind:value={$formData.lastName} placeholder="Enter your last name" />
+    </Form.Control>
 
+    <Form.FieldErrors />
+  </Form.Field>
   <Form.Field {form} name="firstName">
     <Form.Control let:attrs>
       <Form.Label>First Name</Form.Label>
@@ -95,15 +102,6 @@
         bind:value={$formData.middleInitial}
         placeholder="Enter your middle initial"
       />
-    </Form.Control>
-
-    <Form.FieldErrors />
-  </Form.Field>
-
-  <Form.Field {form} name="lastName">
-    <Form.Control let:attrs>
-      <Form.Label>Last Name</Form.Label>
-      <Input {...attrs} bind:value={$formData.lastName} placeholder="Enter your last name" />
     </Form.Control>
 
     <Form.FieldErrors />
