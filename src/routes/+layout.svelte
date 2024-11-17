@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../app.css';
-  import '@fontsource/poppins';
+  // Supports weights 100-900
+  import '@fontsource-variable/public-sans';
   import { invalidate, onNavigate } from '$app/navigation';
   import { fromUserState, initUser } from './_states/fromRootState.svelte';
   import { Toaster } from '$lib/components/ui/sonner';
@@ -45,10 +46,10 @@
 <Toaster richColors={true} />
 {@render children()}
 
-<Footer />
+<!-- <Footer /> -->
 
 <style>
   :global(html) {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Public Sans Variable', sans-serif;
   }
 </style>

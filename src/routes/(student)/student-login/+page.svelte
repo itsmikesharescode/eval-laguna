@@ -27,16 +27,13 @@
           <p class="text-center text-3xl">
             <strong>LC ITE</strong> Faculty Evaluation
           </p>
-          <p class="text-center text-3xl text-muted-foreground">
-            Evaluate as <strong class="text-primary">Student</strong>
-          </p>
         </div>
       </div>
     </div>
   </div>
 
   <div class="overflow-auto md:max-h-screen">
-    <div class="sticky top-0 p-[20px]">
+    <div class="sticky top-0 z-20 p-[20px]">
       <a
         href="/"
         class="flex max-w-fit items-center gap-[5px] rounded-sm bg-secondary p-[10px] text-sm"

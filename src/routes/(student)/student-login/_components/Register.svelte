@@ -13,6 +13,7 @@
   import { CircleHelp, Loader } from 'lucide-svelte';
   import { courseNames, yearLevels } from '$lib';
   import * as Popover from '$lib/components/ui/popover';
+  import PasswordInput from '$lib/components/general/PasswordInput.svelte';
 
   interface Props {
     studentCreateForm: SuperValidated<Infer<StudentCreateSchema>>;
@@ -63,7 +64,15 @@
   <Form.Field {form} name="idNumber">
     <Form.Control let:attrs>
       <Form.Label>Student ID</Form.Label>
-      <Input {...attrs} bind:value={$formData.idNumber} placeholder="Enter your id number" />
+      <div class="relative flex items-center">
+        <Input
+          {...attrs}
+          bind:value={$formData.idNumber}
+          placeholder="Enter your id number"
+          class="pl-10"
+        />
+        <span class="absolute z-10 ml-2 text-sm text-muted-foreground">C21 -</span>
+      </div>
     </Form.Control>
 
     <Form.FieldErrors />
@@ -77,7 +86,14 @@
 
     <Form.FieldErrors />
   </Form.Field>
+  <Form.Field {form} name="lastName">
+    <Form.Control let:attrs>
+      <Form.Label>Last Name</Form.Label>
+      <Input {...attrs} bind:value={$formData.lastName} placeholder="Enter your last name" />
+    </Form.Control>
 
+    <Form.FieldErrors />
+  </Form.Field>
   <Form.Field {form} name="firstName">
     <Form.Control let:attrs>
       <Form.Label>First Name</Form.Label>
@@ -95,15 +111,6 @@
         bind:value={$formData.middleInitial}
         placeholder="Enter your middle initial"
       />
-    </Form.Control>
-
-    <Form.FieldErrors />
-  </Form.Field>
-
-  <Form.Field {form} name="lastName">
-    <Form.Control let:attrs>
-      <Form.Label>Last Name</Form.Label>
-      <Input {...attrs} bind:value={$formData.lastName} placeholder="Enter your last name" />
     </Form.Control>
 
     <Form.FieldErrors />
@@ -224,12 +231,8 @@
   <Form.Field {form} name="password">
     <Form.Control let:attrs>
       <Form.Label>Password</Form.Label>
-      <Input
-        type="password"
-        {...attrs}
-        bind:value={$formData.password}
-        placeholder="Enter your password"
-      />
+      <PasswordInput placeholder="Enter your password" bind:value={$formData.password} {...attrs} />
+      <input type="hidden" bind:value={$formData.password} {...attrs} />
     </Form.Control>
 
     <Form.FieldErrors />
@@ -238,12 +241,12 @@
   <Form.Field {form} name="confirmPassword">
     <Form.Control let:attrs>
       <Form.Label>Confirm Password</Form.Label>
-      <Input
-        type="password"
-        {...attrs}
-        bind:value={$formData.confirmPassword}
+      <PasswordInput
         placeholder="Confirm your password"
+        bind:value={$formData.confirmPassword}
+        {...attrs}
       />
+      <input type="hidden" bind:value={$formData.confirmPassword} {...attrs} />
     </Form.Control>
 
     <Form.FieldErrors />

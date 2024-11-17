@@ -10,6 +10,7 @@
   import { fromUserState } from '../../../_states/fromRootState.svelte';
   import { goto } from '$app/navigation';
   import { Loader } from 'lucide-svelte';
+  import PasswordInput from '$lib/components/general/PasswordInput.svelte';
 
   interface Props {
     adminLoginForm: SuperValidated<Infer<AdminLoginSchema>>;
@@ -57,14 +58,9 @@
   <Form.Field {form} name="password">
     <Form.Control let:attrs>
       <Form.Label>Admin Password</Form.Label>
-      <Input
-        type="password"
-        {...attrs}
-        bind:value={$formData.password}
-        placeholder="Enter your password"
-      />
+      <PasswordInput placeholder="Enter your password" bind:value={$formData.password} {...attrs} />
+      <input type="hidden" bind:value={$formData.password} {...attrs} />
     </Form.Control>
-
     <Form.FieldErrors />
   </Form.Field>
 
