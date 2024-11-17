@@ -70,7 +70,7 @@
           placeholder="Enter your id number"
           class="pl-10"
         />
-        <span class="absolute z-10 ml-2 text-sm">C21 -</span>
+        <span class="absolute z-10 ml-2 text-sm text-muted-foreground">C21 -</span>
       </div>
     </Form.Control>
 
