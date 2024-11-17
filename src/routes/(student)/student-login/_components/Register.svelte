@@ -13,6 +13,7 @@
   import { CircleHelp, Loader } from 'lucide-svelte';
   import { courseNames, yearLevels } from '$lib';
   import * as Popover from '$lib/components/ui/popover';
+  import PasswordInput from '$lib/components/general/PasswordInput.svelte';
 
   interface Props {
     studentCreateForm: SuperValidated<Infer<StudentCreateSchema>>;
@@ -230,12 +231,8 @@
   <Form.Field {form} name="password">
     <Form.Control let:attrs>
       <Form.Label>Password</Form.Label>
-      <Input
-        type="password"
-        {...attrs}
-        bind:value={$formData.password}
-        placeholder="Enter your password"
-      />
+      <PasswordInput placeholder="Enter your password" bind:value={$formData.password} {...attrs} />
+      <input type="hidden" bind:value={$formData.password} {...attrs} />
     </Form.Control>
 
     <Form.FieldErrors />
@@ -244,12 +241,12 @@
   <Form.Field {form} name="confirmPassword">
     <Form.Control let:attrs>
       <Form.Label>Confirm Password</Form.Label>
-      <Input
-        type="password"
-        {...attrs}
-        bind:value={$formData.confirmPassword}
+      <PasswordInput
         placeholder="Confirm your password"
+        bind:value={$formData.confirmPassword}
+        {...attrs}
       />
+      <input type="hidden" bind:value={$formData.confirmPassword} {...attrs} />
     </Form.Control>
 
     <Form.FieldErrors />

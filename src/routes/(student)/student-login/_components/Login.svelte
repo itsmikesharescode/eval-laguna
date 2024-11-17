@@ -10,6 +10,7 @@
   import { goto } from '$app/navigation';
   import { fromUserState } from '../../../_states/fromRootState.svelte';
   import type { User } from '@supabase/supabase-js';
+  import PasswordInput from '$lib/components/general/PasswordInput.svelte';
 
   interface Props {
     studentLoginForm: SuperValidated<Infer<StudentLoginSchema>>;
@@ -57,12 +58,8 @@
   <Form.Field {form} name="password">
     <Form.Control let:attrs>
       <Form.Label>Student Password</Form.Label>
-      <Input
-        type="password"
-        {...attrs}
-        bind:value={$formData.password}
-        placeholder="Enter your password"
-      />
+      <PasswordInput placeholder="Enter your password" bind:value={$formData.password} {...attrs} />
+      <input type="hidden" bind:value={$formData.password} {...attrs} />
     </Form.Control>
 
     <Form.FieldErrors />

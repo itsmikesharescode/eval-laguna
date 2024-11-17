@@ -27,9 +27,6 @@
           <p class="text-center text-3xl">
             <strong>LC ITE</strong> Faculty Evaluation
           </p>
-          <p class="text-center text-3xl text-muted-foreground">
-            Evaluate as <strong class="text-primary">Student</strong>
-          </p>
         </div>
       </div>
     </div>
