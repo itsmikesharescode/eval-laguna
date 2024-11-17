@@ -63,7 +63,15 @@
   <Form.Field {form} name="idNumber">
     <Form.Control let:attrs>
       <Form.Label>Student ID</Form.Label>
-      <Input {...attrs} bind:value={$formData.idNumber} placeholder="Enter your id number" />
+      <div class="relative flex items-center">
+        <Input
+          {...attrs}
+          bind:value={$formData.idNumber}
+          placeholder="Enter your id number"
+          class="pl-10"
+        />
+        <span class="absolute z-10 ml-2 text-sm">C21 -</span>
+      </div>
     </Form.Control>
 
     <Form.FieldErrors />

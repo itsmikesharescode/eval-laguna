@@ -44,7 +44,7 @@ export const actions: Actions = {
         data: {
           role: 'student',
           email: form.data.email,
-          id_number: form.data.idNumber,
+          id_number: `C21 - ${form.data.idNumber}`,
           fullname: `${form.data.lastName},${form.data.firstName},${form.data.middleInitial},`,
           suffix: form.data.nameSuffix ? form.data.nameSuffix : null,
           gender: form.data.gender,

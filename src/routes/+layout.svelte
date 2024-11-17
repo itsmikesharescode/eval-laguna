@@ -46,7 +46,7 @@
 <Toaster richColors={true} />
 {@render children()}
 
-<Footer />
+<!-- <Footer /> -->
 
 <style>
   :global(html) {
